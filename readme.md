@@ -18,6 +18,16 @@ Bienvenue sur le CarAPI qui est un REST API fait à partir de la technologie Nod
 ## Pour démarrer cet API il faut suivre les étapes suivantes :
 
 - Avoir Nodejs installé dans son machine
+- Cloner le repository sur votre machine et acceder à la directory :
+
+```jsx
+git clone https://github.com/RaveloMevaSoavina/car-api.git
+```
+
+```jsx
+cd car-api
+```
+
 - Taper la commande suivante pour l'installation des dépendances tiers :
 
     ```jsx
