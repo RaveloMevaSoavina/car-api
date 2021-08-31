@@ -1,5 +1,7 @@
 "use strict";
 
+const colors = require("colors");
+
 const Car = require('../models/car.model');
 const vehicules = [{
     brand : "Peaugot",
@@ -52,7 +54,7 @@ let seedVehicules = function() {
                         ...vehicule
                     }).save((err) => {
                         if(err){ console.log(err)}
-                        console.log('Vehicules added to database');
+                        console.log('Vehicules added to database'.blue);
                     })
                 }
             }

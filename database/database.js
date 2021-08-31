@@ -2,6 +2,8 @@ const mongoose= require("mongoose");
 const { seedVehicules } = require('../seeds/seedVehicules');
 const { seedUsers } = require('../seeds/seedUsers')
 const { seedComments } = require('../seeds/seedComments')
+
+const colors = require("colors")
 /*
  * SAMPLE_DATABASE : name of the DATABASE (please set SAMPLE_DATABASE to your own database name)
  */
@@ -15,7 +17,7 @@ useUnifiedTopology: true,
 mongoose.connection.on("error", console.error.bind(console, "connection error:".red));
 // connection to database successfuly
 mongoose.connection.once("open", () => {
-    console.log("DB connection established !")
+    console.log("DB connection established !".yellow)
     seedUsers();
     seedVehicules();
     seedComments();

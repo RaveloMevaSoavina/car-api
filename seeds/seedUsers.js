@@ -1,5 +1,6 @@
 "use strict";
 const bcrypt = require('bcryptjs')
+const colors = require("colors");
 
 const User = require('../models/user.model');
 const users = [{
@@ -16,7 +17,7 @@ let seedUsers = function() {
                         ...user
                     }).save((err) => {
                         if(err){ console.log(err)}
-                        console.log('admin super-user added to database');
+                        console.log('admin super-user added to database'.blue);
                     })
                 }
             }

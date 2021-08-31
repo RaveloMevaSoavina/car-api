@@ -1,5 +1,6 @@
 "use strict";
 const bcrypt = require('bcryptjs')
+const colors = require("colors");
 
 const Comment = require('../models/comment.model');
 const comments = [{
@@ -21,7 +22,7 @@ let seedComments = function() {
                         ...comment
                     }).save((err) => {
                         if(err){ console.log(err)}
-                        console.log('admin comments added to database');
+                        console.log('admin comments added to database'.blue);
                     })
                 }
             }

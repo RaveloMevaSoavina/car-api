@@ -3,6 +3,7 @@ const express= require("express");
 const dotenv= require("dotenv");
 const cors = require("cors");
 const methodOverride = require("method-override");
+const colors = require("colors")
 
 // INTERNAL MODULES IMPORTATIONS 
 const database = require("./database/database.js");
@@ -33,4 +34,4 @@ app.use("/api/v1/comment", commentRoutes);
 app.use("/api/v1/auth", authRoutes);
 
 // LISTENING SERVER
-app.listen(PORT, () => console.log(`The server is up and running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`The server is up and running on http://localhost:${PORT}`.green));

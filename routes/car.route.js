@@ -5,6 +5,6 @@ const router = express.Router();
 router.get('/retrieve', controller.retrieve);
 router.post('/create', controller.create);
 router.delete('/delete', controller.delete);
-router.post('/update', controller.update);
+router.put('/update', controller.update);
 
 module.exports = router;
